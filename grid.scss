@@ -3,7 +3,7 @@ $gutter: 1rem !default;
 $font-reset: sans !default;
 
 /* Main wrapper for grid */
-.column-group {
+.block-grid {
   font-family: monospace; /* for spacing columns correctly */
   letter-spacing: -.65em; /* this too */
   margin-left: -$gutter;
@@ -15,7 +15,7 @@ $font-reset: sans !default;
 }
 
 /* Individual columns */
-.column {
+[class*="column-"] {
   font-family: $font-reset; /* be sure to reset the font and letter-spacing */
   letter-spacing: normal;
   display: inline-block;

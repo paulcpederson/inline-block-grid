@@ -39,7 +39,7 @@ This will give you all the classes to start using the grid in your html.
 A simple two column layout would be as follows:
 
 ```
-<div class="column-group">
+<div class="block-grid">
   <div class="column-6">
     ... some stuff
   </div>
@@ -52,7 +52,7 @@ A simple two column layout would be as follows:
 Or a typical sidebar layout:
 
 ```
-<div class="column-group">
+<div class="block-grid">
   <div class="column-2 post-1"></div>
   <div class="column-9"></div>
 </div>
@@ -61,7 +61,7 @@ Or a typical sidebar layout:
 Or how about a product grid:
 
 ```
-<div class="column-group align-center">
+<div class="block-grid align-center">
   <div class="column-3"></div>
   <div class="column-3"></div>
   <div class="column-3"></div>
@@ -81,7 +81,7 @@ Or how about a product grid:
 
 | class | description |
 | ----- | ----------- |
-| `.column-group` | Wrap around columns (required) |
+| `.block-grid` | Wrap around columns (required) |
 | `.column-X` | Amount of columns element should span (1-12) |
 | `.pre-X` | Apply margin-left of `X` columns |
 | `.post-X` | Apply margin-right of `X` columns |
@@ -96,7 +96,7 @@ If you are using sass, you can customize several aspects of the grid:
 | Variable | Description | Default |
 | -------- | ----------- | ------- |
 | `$column-count` | Number of columns in the grid | 12 |
-| `$gutter` | Amount of space between the columns |
+| `$gutter` | Amount of space between the columns | 1rem |
 
 ## Roadmap
 
