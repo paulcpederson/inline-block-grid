@@ -1,0 +1,31 @@
+{
+  "name": "inline-block-grid",
+  "version": "0.0.1",
+  "description": "Simple SASS grid implemented with display:inline-block",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass grid.scss grid.css",
+    "sass:min": "node-sass grid.scss --output-style compressed grid.min.css",
+    "build": "npm run sass && npm run sass:min"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/paulcpederson/inline-block-grid.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "grid",
+    "inline-block"
+  ],
+  "author": "Paul C Pederson <paul.c.pederson@gmail.com> (http://paulcpederson.com/)",
+  "license": "Fair",
+  "bugs": {
+    "url": "https://github.com/paulcpederson/inline-block-grid/issues"
+  },
+  "homepage": "https://github.com/paulcpederson/inline-block-grid",
+  "devDependencies": {
+    "node-sass": "^2.0.1"
+  }
+}

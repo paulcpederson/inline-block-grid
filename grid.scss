@@ -1,0 +1,39 @@
+$column-count: 12 !default;
+$gutter: 1rem !default;
+$font-reset: sans !default;
+
+/* Main wrapper for grid */
+.column-group {
+  font-family: monospace; /* for spacing columns correctly */
+  letter-spacing: -.65em; /* this too */
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+  text-align: left;
+  display: block;
+  &.align-center { text-align: center; }
+  &.align-right  { text-align: right; }
+}
+
+/* Individual columns */
+.column {
+  font-family: $font-reset; /* be sure to reset the font and letter-spacing */
+  letter-spacing: normal;
+  display: inline-block;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  position: relative;
+  float: none;
+  text-align: left;
+  vertical-align: top; /* align row's columns top or baseline */
+  box-sizing: border-box;
+  &.align-baseline {
+    vertical-align: baseline;
+  }
+}
+
+@for $n from 1 through $column-count {
+  $column: ($n / $column-count) * 100%;
+  .column-#{$n} { width: $column; }
+  .pre-#{$n}    { margin-left: $column; }
+  .post-#{$n}   { margin-right: $column; }
+}
