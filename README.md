@@ -97,6 +97,7 @@ If you are using sass, you can customize several aspects of the grid:
 | -------- | ----------- | ------- |
 | `$column-count` | Number of columns in the grid | 12 |
 | `$gutter` | Amount of space between the columns | 1rem |
+| `$font-reset` | Default font family for your project | sans |
 
 ## Roadmap
 
