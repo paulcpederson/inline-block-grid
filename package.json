@@ -3,11 +3,17 @@
   "version": "0.0.2",
   "description": "Simple SASS grid implemented with display:inline-block",
   "main": "index.js",
+  "files": [
+    "grid.scss",
+    "grid.css",
+    "grid.min.css"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "node-sass grid.scss grid.css",
     "sass:min": "node-sass grid.scss --output-style compressed grid.min.css",
-    "build": "npm run sass && npm run sass:min"
+    "build": "npm run sass && npm run sass:min",
+    "release": "gh-release -z"
   },
   "repository": {
     "type": "git",
@@ -26,6 +32,7 @@
   },
   "homepage": "https://github.com/paulcpederson/inline-block-grid",
   "devDependencies": {
+    "gh-release": "^1.1.1",
     "node-sass": "^2.0.1"
   }
 }
