@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/paulcpederson/inline-block-grid.git"
+    "url": "https://github.com/paulcpederson/inline-block-grid.git"
   },
   "keywords": [
     "css",
