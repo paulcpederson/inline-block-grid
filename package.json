@@ -13,7 +13,8 @@
     "sass": "node-sass grid.scss grid.css",
     "sass:min": "node-sass grid.scss --output-style compressed grid.min.css",
     "build": "npm run sass && npm run sass:min",
-    "release": "gh-release -z"
+    "release": "gh-release",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -32,7 +33,7 @@
   },
   "homepage": "https://github.com/paulcpederson/inline-block-grid",
   "devDependencies": {
-    "gh-release": "^1.1.1",
+    "gh-release": "^1.1.2",
     "node-sass": "^2.0.1"
   }
 }
