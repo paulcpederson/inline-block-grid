@@ -1,6 +1,6 @@
 {
   "name": "inline-block-grid",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Simple SASS grid implemented with display:inline-block",
   "main": "index.js",
   "files": [
