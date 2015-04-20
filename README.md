@@ -89,6 +89,33 @@ Or how about a product grid:
 | `.align-center` | Column group should center orphan columns |
 | `.align-baseline` | Column content aligned to baseline |
 
+## Responsive Classes
+
+For easy responsive layouts, each class is also available with `small-` and `medium-` prefixes. For example, to create an element that is full-width on a phone, half-width on a tablet, and quarter-width on a desktop:
+
+```html
+<div class="column-6 medium-column-12 small-column-24">
+  <h1> Responsive Columns!</h1>
+</div>
+```
+
+There are also responsive `pre` and `post` classes for spacing:
+
+```html
+<div class="column-4 pre-12 small-pre-6 medium-pre-2"></div>
+```
+
+### Responsive Class Reference
+
+| class | description |
+| ----- | ----------- |
+| `small-column-X` | Width at small screen size |
+| `small-pre-X` | Margin left at small screen size |
+| `small-post-X` | Margin right at small screen size |
+| `medium-column-X` | Width at medium screen size |
+| `medium-pre-X` | Margin left at medium screen size |
+| `medium-post-X` | Margin right at medium screen size |
+
 ## Customization
 
 If you are using sass, you can customize several aspects of the grid:
@@ -98,10 +125,8 @@ If you are using sass, you can customize several aspects of the grid:
 | `$column-count` | Number of columns in the grid | 12 |
 | `$gutter` | Amount of space between the columns | 1rem |
 | `$font-reset` | Default font family for your project | sans |
-
-## Roadmap
-
-- [ ] Simple responsive classes
+| `$size-small` | Small size breakpoint | 480px |
+| `$size-medium` | Medium size breakpoint | 960px |
 
 ## License
 
