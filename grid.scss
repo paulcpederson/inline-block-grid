@@ -1,11 +1,12 @@
 $column-count: 12 !default;
-$gutter: 1rem !default;
-$font-reset: sans !default;
+$gutter:       1rem !default;
+$font-reset:   sans !default;
+$size-small:   480px !default;
+$size-medium:  960px !default;
 
-/* Main wrapper for grid */
 .block-grid {
-  font-family: monospace; /* for spacing columns correctly */
-  letter-spacing: -.65em; /* this too */
+  font-family: monospace;
+  letter-spacing: -.65em;
   margin-left: -$gutter;
   margin-right: -$gutter;
   text-align: left;
@@ -14,9 +15,8 @@ $font-reset: sans !default;
   &.align-right  { text-align: right; }
 }
 
-/* Individual columns */
 [class*="column-"] {
-  font-family: $font-reset; /* be sure to reset the font and letter-spacing */
+  font-family: $font-reset;
   letter-spacing: normal;
   display: inline-block;
   padding-left: $gutter;
@@ -24,16 +24,39 @@ $font-reset: sans !default;
   position: relative;
   float: none;
   text-align: left;
-  vertical-align: top; /* align row's columns top or baseline */
+  vertical-align: top;
   box-sizing: border-box;
   &.align-baseline {
     vertical-align: baseline;
   }
 }
 
+@function column ($i) {
+  @return ($i / $column-count) * 100%;
+}
+
 @for $n from 1 through $column-count {
-  $column: ($n / $column-count) * 100%;
-  .column-#{$n} { width: $column; }
-  .pre-#{$n}    { margin-left: $column; }
-  .post-#{$n}   { margin-right: $column; }
+  .column-#{$n} { width: column($n); }
+  .pre-#{$n}    { margin-left: column($n); }
+  .post-#{$n}   { margin-right: column($n); }
+}
+
+@media (max-width: $size-medium) {
+  @for $i from 1 through $column-count {
+    .medium-column-#{$i} { width: column($i); }
+  }
+  @for $i from 0 through $column-count {
+    .medium-pre-#{$i}  { margin-left: column($i); }
+    .medium-post-#{$i} { margin-right: column($i); }
+  }
+}
+
+@media (max-width: $size-small) {
+  @for $i from 1 through $column-count {
+    .small-column-#{$i} { width: column($i); }
+  }
+  @for $i from 0 through $column-count {
+    .small-pre-#{$i}  { margin-left: column($i); }
+    .small-post-#{$i} { margin-right: column($i); }
+  }
 }
